@@ -1,0 +1,26 @@
+<h1 id="tableLabel">Movies</h1>
+
+<p>This component demonstrates fetching movies from the server.</p>
+
+<button class="btn btn-primary" [routerLink]="['/movies-add']">Add movie</button>
+
+<p *ngIf="!movies"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="movies">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Release year</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movie of movies">
+      <td>{{ movie.id }}</td>
+      <td>{{ movie.name }}</td>
+      <td>{{ movie.releaseYear }}</td>
+      <td><button class="btn btn-primary" (click)="deleteMovie(movie)">delete</button></td>
+    </tr>
+  </tbody>
+</table>
