@@ -21,6 +21,7 @@
       <td>{{ movie.name }}</td>
       <td>{{ movie.releaseYear }}</td>
       <td><button class="btn btn-primary" (click)="deleteMovie(movie)">delete</button></td>
+      <td><a href="/movies-update?id={{movie.id}}" class="btn btn-primary">Update</a></td>
     </tr>
   </tbody>
 </table>

@@ -1,0 +1,8 @@
+<div *ngIf="movie">
+  <h1 id="tableLabel">Update movie</h1>
+  Name: <br />
+  <input [(ngModel)]=movie.name /><br />
+  Release Year: <br />
+  <input [(ngModel)]=movie.releaseYear/><br />
+  <button class="btn btn-primary" (click)="saveMovie()">Update</button>
+  <button class="btn btn-primary" (click)="backToList()">Back to list</button>
